@@ -213,7 +213,7 @@ a.active hr {
   }
 
   .grad1 {
-    @apply text-transparent bg-gradient-to-tr bg-clip-text from-indigo-100 to-indigo-400;
+    @apply text-transparent bg-gradient-to-tr bg-clip-text from-blue-100 to-blue-400;
   }
 
   .link-hover {

@@ -1,11 +1,31 @@
 import {Command} from "lucide-react";
+import { useState, useEffect } from "react";
 
 
 const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  // Scroll Effect On NavBar
+
+  useEffect(()=>{
+    const handleScroll = () => {
+      setIsScrolled(window.scrolly > 50)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)
+
+  },[])
+
   return (
-      <header className="fixed cursor-pointer top-3.5 left-1/2
-      -translate-x-1/2 z-50 transition-all duration-300 rounded-full h-14
-      bg-[#1b1b1b] border border-white/10 scale--95 w-[90%] max-w-2xl">
+      <header className={`fixed cursor-pointer top-3.5 left-1/2
+      -translate-x-1/2 z-50 transition-all duration-300 rounded-full ${
+
+        isScrolled 
+        ? "h-14 bg-[#1b1b1b]/40 backdrop-blur-xl border border-white/10 scale w-[95%] max-w-2xl" 
+        : "h-14 bg-[#1b1b1b] w-[95%] max-w-3xl"
+      }`}>
 
         <div className="mx-auto h-full px-6">
 
