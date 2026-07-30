@@ -13,7 +13,7 @@ const FeaturesSection = () => {
                 </span>
             </h2>
 
-            <p className="">
+            <p className="text-lg text-zinc-300/80 text-left">
                 Experience professional-grade trading tools and features
                 designed for both novice and experienced crypto traders.
             </p>
@@ -29,24 +29,12 @@ const FeaturesSection = () => {
                     {/* Content */}
                     <div className="">
                         <h3 className="">
-                            Feature Title
+
+
                         </h3>
-
-                        <p className="">
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Mollitia consectetur 
-                            ut aspernatur vitae optio impedit.
-                        </p>
-                    </div>
-
-                </div>
-                {/* Right: Tab Images*/}
-                <div className="">
-                    <div className="">
-
                     </div>
                 </div>
-
+                {/* right: Tab Images */}
             </div>
         </div>
     </section>
