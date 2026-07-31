@@ -98,4 +98,52 @@ const footerLinks = [
   },
 ];
 
-export { footerLinks, testimonials, features };
+const pricingData = [
+  {
+    _id: "001",
+    name: "Starter",
+    price: "$29",
+    description: "Perfect for beginners looking to start their trading journey.",
+    isPopular: false,
+    features: [
+      "Basic trading tools",
+      "Real-time market data",
+      "Email support",
+      "5 active trades",
+      "Basic analytics",
+    ],
+  },
+  {
+    _id: "002",
+    name: "Professional",
+    price: "$99",
+    description: "Advanced tools and features for serious traders.",
+    isPopular: true,
+    features: [
+      "Advanced trading tools",
+      "Real-time market data",
+      "Priority support",
+      "Unlimited active trades",
+      "Advanced analytics",
+      "API access",
+    ],
+  },
+  {
+    _id: "003",
+    name: "Enterprise",
+    price: "Custom",
+    description: "Tailored solutions for institutional traders and funds.",
+    isPopular: false,
+    features: [
+      "Custom trading tools",
+      "Dedicated account manager",
+      "24/7 phone support",
+      "Unlimited active trades",
+      "Custom analytics",
+      "Full API access",
+      "White-label options",
+    ],
+  },
+];
+
+export { footerLinks, testimonials, features, pricingData };

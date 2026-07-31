@@ -1,4 +1,5 @@
-import { Command, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Command } from "lucide-react";
+import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 import { footerLinks } from "../assets/data.jsx";
 
@@ -9,8 +10,8 @@ const Footer = () => {
         <div className="bg-[#0A0A0A]/80  border border-white/10 rounded-xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <div className="centered-row gap-2 cursor-pointer hover:-translate-y-1 transition2">
-                <Command className="w-6 h-6 text-indigo-400" />
+              <div className="centered-row gap-2 cursor-pointer hover:-translate-y-1 transition-all">
+                <Command className="w-6 h-6 text-blue-400" />
 
                 <h3 className="clash-display text-lg text-zinc-100">
                   ForexTrade
@@ -21,13 +22,13 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 <button variant="ghost" size="icon">
-                  <Instagram className="w-6 h-6" />
+                  <FaInstagram className="w-6 h-6" />
                 </button>
                 <button variant="ghost" size="icon">
-                  <Facebook className="w-6 h-6" />
+                  <FaFacebook className="w-6 h-6" />
                 </button>
                 <button variant="ghost" size="icon">
-                  <Linkedin className="w-6 h-6" />
+                  <FaLinkedin className="w-6 h-6" />
                 </button>
               </div>
             </div>
@@ -42,7 +43,7 @@ const Footer = () => {
                     <li key={index}>
                       <a
                         href="#features"
-                        className="text-sm text-zinc-400 hover:text-indigo-300  hover:ml-3 transition2"
+                        className="text-sm text-zinc-400 hover:text-blue-300  hover:ml-3 transition-all"
                       >
                         {item}
                       </a>

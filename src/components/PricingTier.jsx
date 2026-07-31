@@ -5,12 +5,12 @@ const PricingTier = ({ name, price, description, features, isPopular }) => {
   return (
     <CardSpotlight
       className={`h-full border-2 cursor-pointer ${
-        isPopular ? "border-indigo-500" : "border-white/10"
+        isPopular ? "border-blue-500" : "border-white/10"
       }`}
     >
       <div className="relative h-full p-6 flex flex-col">
         {isPopular && (
-          <span className="text-xs font-medium bg-indigo-400/30 text-indigo-100 rounded-full px-3 py-1 w-fit mb-4">
+          <span className="text-xs font-medium bg-blue-400/30 text-blue-100 rounded-full px-3 py-1 w-fit mb-4">
             Most Popular
           </span>
         )}
@@ -20,7 +20,7 @@ const PricingTier = ({ name, price, description, features, isPopular }) => {
 
         {/* Price */}
         <div className="mb-4 mt-2">
-          <span className="text-4xl font-bold clash-display text-indigo-300">
+          <span className="text-4xl font-bold clash-display text-blue-300">
             {price}
           </span>
           {price !== "Custom" && <span className="text-gray-400">/month</span>}
@@ -33,7 +33,7 @@ const PricingTier = ({ name, price, description, features, isPopular }) => {
         <ul className="space-y-3 mb-6 flex-grow ">
           {features.map((feature, index) => (
             <li key={index} className="centered-row gap-2">
-              <Check className="w-5 h-5 text-indigo-300" />
+              <Check className="w-5 h-5 text-blue-300" />
               <span className="text-sm text-gray-300">{feature}</span>
             </li>
           ))}
@@ -41,7 +41,7 @@ const PricingTier = ({ name, price, description, features, isPopular }) => {
 
         {/* Button */}
 
-        <button className="bg-indigo-500 py-4 w-full text-zinc-50 rounded-full text-lg clash-display cursor-pointer hover:bg-indigo-400/10 hover:text-indigo-300 transition2 ">
+        <button className="bg-blue-500 py-4 w-full text-zinc-50 rounded-full text-lg clash-display cursor-pointer hover:bg-blue-400/10 hover:text-blue-300 transition-all ">
           Start Trading
         </button>
       </div>
