@@ -46,7 +46,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Crypto Fund Manager",
-    image: null,
+    image: "/av5.png",
     content:
       "ForexTrade's institutional-grade tools have transformed our trading strategy. The API integration and automated features have saved us countless hours.",
   },
