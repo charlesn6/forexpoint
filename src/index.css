@@ -36,6 +36,10 @@
   font-family: "poppins", "Plus Jakarta Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .playfair-display {
   font-family: "Playfair Display", serif;
   font-weight: 400;

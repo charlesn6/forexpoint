@@ -1,6 +1,13 @@
 import { Command } from "lucide-react";
 import { useState, useEffect } from "react";
 
+const navigationItems = [
+  { label: "Features", href: "#features" },
+  { label: "Prices", href: "#pricing" },
+  { label: "Testimonials", href: "#testimonials" },
+];
+
+const ctaHref = "#get-started";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -32,32 +39,35 @@ const NavBar = () => {
 
     <nav className="centered-row justify-between h-full">
         {/* Logo */}
-      <div className="centered-row gap-2 hover:-translate-y-1
-      duration-200 transition-all ease-out">
+      <a
+        href="#top"
+        aria-label="ForexPoint home"
+        className="centered-row gap-2 hover:-translate-y-1 duration-200 transition-all ease-out"
+      >
 
         <Command className="w-5 h-5 text-blue-400"/>
 
         <span className="font-blod text-base
         clash-display">ForexPoint</span>
 
-      </div>
+      </a>
         {/* Desktop Navigation */}
 
       <div className="hidden md:centered-row gap-6">
-        {["Features", "Prices", "Testimonials"].map((item,index)=>(
-            <a key={index} href="nav_link" className="text-sm
+        {navigationItems.map(({ label, href }) => (
+            <a key={href} href={href} className="text-sm
             text-zinc-400 hover:text-blue-200 hover-translate-y-1
             ease-out transition-all duration-300">
-              {item}
+              {label}
             </a>
         ))}
         {/* Button */}
 
-      <button className="clash-display text-base bg-gradient-to-r
+      <a href={ctaHref} className="clash-display text-base bg-gradient-to-r
       from-blue-400 to-blue-600 px-4 py-2 rounded-full
       cursor-point hover:-translate-y-0.5 duration-200
       transition-all ease-out hover:shadow-xl
-      hover:shadow-blue-900">Start Trading</button>
+      hover:shadow-blue-900">Start Trading</a>
 
       </div>
 
@@ -79,19 +89,19 @@ const NavBar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-1/2 -translate-x-1/2 w-[90%] bg-[#1b1b1b]/95 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col items-center gap-4">
-          {["Features", "Prices", "Testimonials"].map((item, index) => (
-            <a key={index} href="nav_link" className="text-sm text-zinc-400 hover:text-blue-200 transition-all duration-300"
+          {navigationItems.map(({ label, href }) => (
+            <a key={href} href={href} className="text-sm text-zinc-400 hover:text-blue-200 transition-all duration-300"
               onClick={() => setIsMenuOpen(false)}>
-              {item}
+              {label}
             </a>
           ))}
-          <button
-            type="button"
+          <a
+            href={ctaHref}
             className="clash-display text-base bg-gradient-to-r from-blue-400 to-blue-600 px-4 py-2 rounded-full cursor-pointer hover:-translate-y-0.5 duration-200 transition-all ease-out hover:shadow-xl hover:shadow-blue-900"
             onClick={() => setIsMenuOpen(false)}
           >
             Start Trading
-          </button>
+          </a>
         </div>
       )}
 

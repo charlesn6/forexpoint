@@ -36,7 +36,7 @@ const FeaturesSection = () => {
 
 
   return (
-    <section className="container mx-auto px-4 py-24">
+    <section id="features" className="container mx-auto scroll-mt-24 px-4 py-24">
         {/* Title */}
         <div className="max-w-2xl mb-20">
             <h2 className="text-5xl md:text-6xl mb-6 tracking-tight 

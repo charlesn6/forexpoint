@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const CtaSection = () => {
   return (
-    <section className="container mx-auto px-4 py-20 relative bg-black">
+    <section id="get-started" className="container mx-auto scroll-mt-24 px-4 py-20 relative bg-black">
         {/* BG Image */}
         <div className="absolute inset-0 opacity-40" 
              style={{backgroundImage: 'url("/crack.png")',

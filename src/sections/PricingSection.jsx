@@ -3,7 +3,7 @@ import PricingTier from "../components/PricingTier";
 
 const PricingSection = () => {
   return (
-    <section className="container mx-auto px-4 py-24">
+    <section id="pricing" className="container mx-auto scroll-mt-24 px-4 py-24">
         {/* Title */}
         <div className="max-w-2xl mx-auto text-center mb-12">
             <h2 className="text-5xl md:text-6xl mb-6 clash-display">

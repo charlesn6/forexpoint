@@ -25,7 +25,7 @@ const TestimonialSection = () => {
 
 
   return (
-    <section className="py-20 overflow-hidden">
+    <section id="testimonials" className="scroll-mt-24 py-20 overflow-hidden">
         <div className="container mx-auto px-4">
             {/* Title */}
             <div className="text-center mb-16">
